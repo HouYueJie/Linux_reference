@@ -10,11 +10,16 @@ cuDNN 8.0-linux-x64-v7.1
   
 -安装过程  
 1.确定系统 kernel vision 和 system vision；  
-![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)  
+![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
+  
 2.查看gcc 和 kernel header 和 package development的版本情况；  
   
-3.安装系统推荐的GPU drive；  
+  若版本不够：sudo apt-get install build-essential ; sudo apt install linux-headers-$(uname -r)  
   
+3.安装系统推荐的GPU drive；  
+  Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
+  
+  如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
 4.根据GPU drive 选择合适的 CUDA；  
   
 5.根据CUDA vision 选择合适的 kernel vision；  

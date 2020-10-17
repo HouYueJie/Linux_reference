@@ -2,7 +2,7 @@
 关于linux的相关操作参考
 
 # 一.在Ubuntu上安装CUDA【单系统方法】
-=============
+---------------
 - 配置环境  
 Ubuntu 16.04 <-> kernel vision 4.4.0.31  
 NVIDIA GPU dirve 384.130  
@@ -12,7 +12,7 @@ cuDNN 8.0-linux-x64-v7.1
 -安装过程  
 1.确定系统 kernel vision 和 system vision；  
 ![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
------------  
+----------- - 
 2.查看gcc 和 kernel header 和 package development的版本情况；  
   
   若版本不够：sudo apt-get install build-essential ; sudo apt install linux-headers-$(uname -r)  

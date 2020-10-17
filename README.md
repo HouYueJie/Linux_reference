@@ -13,9 +13,10 @@ cuDNN 8.0-linux-x64-v7.1
 #### 1.确定系统 kernel vision 和 system vision；  
 ![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
 
-#### 2.查看gcc 和 kernel header 和 package development的版本情况；  
-  
-  若版本不够：sudo apt-get install build-essential ; sudo apt install linux-headers-$(uname -r)  
+#### 2.查看gcc 和 kernel header 和 package development的版本情况:  
+    
+    sudo apt-get install build-essential #若报错或等级不够则使用 
+    sudo apt install linux-headers-$(uname -r)  
 
 #### 3.安装系统推荐的GPU drive；  
   Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
@@ -34,7 +35,8 @@ i[image]()
   
 #### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
   
-  ##### 1) 查看可更新版本：sudo apt-cache search linux-image
+  ##### 1) 查看可更新版本：
+    sudo apt-cache search linux-image
     
   ##### 2）安装指定版本：  
     sudo apt-get install linux-image-x.x.x-x-generic；  

@@ -13,8 +13,8 @@ cuDNN 8.0-linux-x64-v7.1
 #### 1.确定系统 kernel vision 和 system vision；  
 ![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
 
-#### 2.查看gcc 和 kernel header 和 package development的版本情况:  
-    
+#### 2.查看gcc 版本情况:  
+    sudo gcc --version
     sudo apt-get install build-essential #若报错或等级不够则使用 
     sudo apt install linux-headers-$(uname -r)  
 
@@ -50,8 +50,14 @@ i[image]()
       
   ##### 4)后续删除多余版本kernel，即可改回grub。
 
-##### 7.关闭 nouveau；  
-  
+##### 7.关闭 nouveau:
+    cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单
+    blacklist nouveau #写入如下两句 
+    options nouveau modeset=0 #保存退出
+    sudo update-initramfs -u
+    sudo reboot #重启
+    lsmod | grep nouveau #没有打印内容则成功
+    
 #### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
   
 #### 9.下载并安装版本对应的cuDNN

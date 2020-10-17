@@ -20,9 +20,16 @@ cuDNN 8.0-linux-x64-v7.1
   Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
   
   如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
+  
+  
 4.根据GPU drive 选择合适的 CUDA；  
+【版本不对后续会出问题】
+i[image]()  
   
 5.根据CUDA vision 选择合适的 kernel vision；  
+【版本不对后续会出问题】
+i[image]()  
+  
   
 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
   

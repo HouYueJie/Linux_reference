@@ -32,6 +32,7 @@ i[image]()
   
   
 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
+  
   1) 查看可更新版本：sudo apt-cache search linux-image
     
   2）安装指定版本：  

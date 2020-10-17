@@ -3,10 +3,10 @@
 
 # 一.在Ubuntu上安装CUDA
 - 配置环境  
-  Ubuntu 16.04 <-> kernel vision 4.4.0.31  
-  NVIDIA GPU dirve 384.130  
-  CUDA Toolkit 8.0(GA2)  
-  cuDNN 8.0-linux-x64-v7.1  
+Ubuntu 16.04 <-> kernel vision 4.4.0.31  
+NVIDIA GPU dirve 384.130  
+CUDA Toolkit 8.0(GA2)  
+cuDNN 8.0-linux-x64-v7.1  
   
 -安装过程  
 1.确定系统 kernel vision 和 system vision；  

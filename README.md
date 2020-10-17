@@ -10,7 +10,7 @@ cuDNN 8.0-linux-x64-v7.1
   
 -安装过程  
 1.确定系统 kernel vision 和 system vision；  
-  
+![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)  
 2.查看gcc 和 kernel header 和 package development的版本情况；  
   
 3.安装系统推荐的GPU drive；  

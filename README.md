@@ -10,6 +10,12 @@ CUDA Toolkit 8.0(GA2)
 cuDNN 8.0-linux-x64-v7.1  
   
 ##  -安装过程  
+### 预备依赖库
+    sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+    sudo apt-get install --no-install-recommends libboost-all-dev
+    sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev 
+    sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
+    sudo apt-get install git cmake build-essential
 ### 1.确定系统 kernel vision 和 system vision；  
 ![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
 
@@ -52,8 +58,8 @@ i[image]()
 
 ### 7.关闭 nouveau:
     cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单
-    blacklist nouveau #写入如下两句 
-    options nouveau modeset=0 #保存退出
+     * blacklist nouveau #写入如下两句 
+     * options nouveau modeset=0 #保存退出
     sudo update-initramfs -u
     sudo reboot #重启
     lsmod | grep nouveau #没有打印内容则成功
@@ -71,7 +77,11 @@ i[image]()
     sudo vim ~/.bashrc
      * export PATH=/usr/local/cuda-9.1/bin:$PATH
      * export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
-    
+    sudo vim /etc/profile #动态链接库
+     * export PATH=/usr/local/cuda/bin:$PATH
+    sudo vim /etc/ld.so.conf.d/cuda.conf #创建连接文件
+     * /usr/local/cuda/lib64
+    sudo ldconfig #执行
     
   
 ### 9.下载并安装版本对应的cuDNN

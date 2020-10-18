@@ -51,7 +51,7 @@ i[image]()
     
    #### >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
-    i[image]()  
+   i[image]()  
       
       
    #### >4 后续删除多余版本kernel，即可改回grub。
@@ -67,13 +67,13 @@ i[image]()
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
    #### >1 下载
     https://developer.nvidia.com/cuda-toolkit-archive
-    i[image]()  
+   i[image]()  
     
    #### >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
     【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
     有如下图则安装成功
-    i[image]()  
+   i[image]()  
     
    #### >3 配置环境变量
     sudo vim ~/.bashrc
@@ -95,28 +95,18 @@ i[image]()
 ### 9.下载并安装版本对应的cuDNN
    #### >1 下载 【推荐解压包安装，稳定】
     https://developer.nvidia.com/rdp/cudnn-archive
-    i[image]()  
+   i[image]()  
     
-   #### >2 安装
-    sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
-    【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
-    有如下图则安装成功
-    i[image]()  
+   #### >2 解压
+    tar -xzvf cudnn-9.0-linux-x64-v7.tgz
     
-   #### >3 配置环境变量
-    sudo vim ~/.bashrc
-     * export PATH=/usr/local/cuda-9.1/bin:$PATH
-     * export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
-    sudo vim /etc/profile #动态链接库
-     * export PATH=/usr/local/cuda/bin:$PATH
-    sudo vim /etc/ld.so.conf.d/cuda.conf #创建连接文件
-     * /usr/local/cuda/lib64
-    sudo ldconfig #执行
+   #### >3 拷贝头文件和库文件并给予权限
+    sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+    sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+    sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
     
    #### >4 验证安装成功
-    cd /usr/local/cuda-*/sample/1_Utilities/deviceQuery
-    sudo make
-    sudo ./deviceQuery
+    cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
     有如下图所示结果，则安装成功
-
+   i[image]()
 

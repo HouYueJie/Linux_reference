@@ -16,29 +16,31 @@ cuDNN 8.0-linux-x64-v7.1
     sudo apt-get install libopenblas-dev liblapack-dev libatlas-base-dev 
     sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
     sudo apt-get install git cmake build-essential
+    
 ### 1.确定系统 kernel vision 和 system vision；  
 ![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
 
 ### 2.查看gcc 和 g++ 版本情况:  
     sudo gcc --version
     sudo g++ --version
-    #若报错或等级不够则使用下面两条语句 
+    #若报错则使用下面两条语句 
     sudo apt-get install build-essential 
     sudo apt install linux-headers-$(uname -r)  
     
     #若没有安装或者等级太高【自行百度降级流程】
+    
 ### 3.安装系统推荐的GPU drive；  
   Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
   
   如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
+i[image]()
 
-  
 ### 4.根据GPU drive 匹配 CUDA vision；  
-【版本不对后续会出问题】
+【版本不对后续会出问题!!!】
 i[image]()  
 
 ### 5.根据CUDA vision 匹配 kernel vision；  
-【版本不对后续会出问题】
+【版本不对后续会出问题!!!】
 i[image]()  
 
   
@@ -49,12 +51,11 @@ i[image]()
    #### >2 安装指定版本：  
     sudo apt-get install linux-image-x.x.x-x-generic；  
     sudo apt-get install linux-image-extra-x.x.x-x-generic；   
-    sudo apt-get install linux-headers-x.x.x-x-generic。  
+    sudo apt-get install linux-headers-x.x.x-x-generic   
     
    #### >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
    i[image]()  
-      
       
    #### >4 后续删除多余版本kernel，即可改回grub。
 
@@ -92,7 +93,7 @@ i[image]()
     sudo make
     sudo ./deviceQuery
     有如下图所示结果，则安装成功
-    
+   i[image]()
   
 ### 9.下载并安装版本对应的cuDNN
    #### >1 下载 【推荐解压包安装，稳定】

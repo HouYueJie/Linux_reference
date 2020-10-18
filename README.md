@@ -59,7 +59,21 @@ i[image]()
     lsmod | grep nouveau #没有打印内容则成功
     
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
-  https://developer.nvidia.com/cuda-toolkit-archive
+    >1 下载
+    https://developer.nvidia.com/cuda-toolkit-archive
+    i[image]()
+    >2 安装
+    sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
+    【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
+    有如下图则安装成功
+    i[image]()
+    >3 配置环境变量
+    sudo vim ~/.bashrc
+     * export PATH=/usr/local/cuda-9.1/bin:$PATH
+     * export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
+    
+    
+  
 ### 9.下载并安装版本对应的cuDNN
 
 

@@ -56,8 +56,9 @@ cuDNN 8.0-linux-x64-v7.1
    #### >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/7.png)  
-   #### >4 在高级选项中选择合适的内核启动  
-   
+     
+   #### >4 重启 --> grub界面 --> 高级选项 --> 选择合适的内核启动  
+     
    #### >5 后续删除多余版本kernel，即可改回grub。
 
 ### 7.关闭 nouveau:

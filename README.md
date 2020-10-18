@@ -36,12 +36,12 @@ cuDNN 8.0-linux-x64-v7.1
 i[image]()
 
 ### 4.根据GPU drive 匹配 CUDA vision；  
-【版本不对后续会出问题!!!】 
-i[image]()  
+【版本不对后续会出问题!!!】  
+ i[image]()  
 
 ### 5.根据CUDA vision 匹配 kernel vision；  
-【版本不对后续会出问题!!!】 
-i[image]()  
+【版本不对后续会出问题!!!】  
+ i[image]()  
 
   
 ### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
@@ -75,7 +75,7 @@ i[image]()
    #### >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
     【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
-    有如下图则安装成功 
+    有如下图则安装成功  
    i[image]()  
     
    #### >3 配置环境变量

@@ -15,7 +15,8 @@ cuDNN 8.0-linux-x64-v7.1
 
 #### 2.查看gcc 版本情况:  
     sudo gcc --version
-    sudo apt-get install build-essential #若报错或等级不够则使用 
+    #若报错或等级不够则使用下面两条语句 
+    sudo apt-get install build-essential 
     sudo apt install linux-headers-$(uname -r)  
 
 #### 3.安装系统推荐的GPU drive；  
@@ -35,20 +36,20 @@ i[image]()
   
 #### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
   
-   ##### * 查看可更新版本：
+   ##### 1 查看可更新版本：
     sudo apt-cache search linux-image
     
-   ##### * 安装指定版本：  
+   ##### 2 安装指定版本：  
     sudo apt-get install linux-image-x.x.x-x-generic；  
     sudo apt-get install linux-image-extra-x.x.x-x-generic；   
     sudo apt-get install linux-headers-x.x.x-x-generic。  
     
-   ##### * 修改grub文件：【便于进入grub界面】  
+   ##### 3 修改grub文件：【便于进入grub界面】  
     sudo vim /etc/default/grub;  
     i[image]()  
       
       
-   ##### * 后续删除多余版本kernel，即可改回grub。
+   ##### 4 后续删除多余版本kernel，即可改回grub。
 
 ##### 7.关闭 nouveau:
     cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单

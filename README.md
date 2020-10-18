@@ -63,10 +63,11 @@ cuDNN 8.0-linux-x64-v7.1
     cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单
      * blacklist nouveau #写入如下两句 
      * options nouveau modeset=0 #保存退出
+    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/8.png)   
     sudo update-initramfs -u
     sudo reboot #重启
     lsmod | grep nouveau #没有打印内容则成功
-    
+    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/9.png)  
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
    #### >1 下载
     https://developer.nvidia.com/cuda-toolkit-archive

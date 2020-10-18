@@ -25,23 +25,23 @@ cuDNN 8.0-linux-x64-v7.1
     sudo g++ --version
     #若报错则使用下面两条语句 
     sudo apt-get install build-essential 
-    sudo apt install linux-headers-$(uname -r)  
-    
+    sudo apt install linux-headers-$(uname -r)    
+    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
     #若没有安装或者等级太高【自行百度降级流程】
     
 ### 3.安装系统推荐的GPU drive；  
-  Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
-  
+  Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。    
+![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/3.jpg)  
   如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
-![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
+![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)
 
 ### 4.根据GPU drive 匹配 CUDA vision；  
 【版本不对后续会出问题!!!】  
- ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/3.png)  
+ ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/5.png)  
 
 ### 5.根据CUDA vision 匹配 kernel vision；  
 【版本不对后续会出问题!!!】  
- ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)  
+ ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/6.png)  
 
   
 ### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
@@ -55,7 +55,7 @@ cuDNN 8.0-linux-x64-v7.1
     
    #### >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
-   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/5.png)  
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/7.png)  
       
    #### >4 后续删除多余版本kernel，即可改回grub。
 

@@ -1,7 +1,7 @@
 # Linux_reference
 关于linux的相关操作参考
 
-# 一.在Ubuntu上安装CUDA【单系统方法】
+# 一.在Ubuntu16 上安装CUDA8 【单系统方法】
 
 ## - 配置环境  
 Ubuntu 16.04 <-> kernel vision 4.4.0.31  
@@ -93,6 +93,30 @@ i[image]()
     
   
 ### 9.下载并安装版本对应的cuDNN
-
+   #### >1 下载 【推荐解压包安装，稳定】
+    https://developer.nvidia.com/rdp/cudnn-archive
+    i[image]()  
+    
+   #### >2 安装
+    sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
+    【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
+    有如下图则安装成功
+    i[image]()  
+    
+   #### >3 配置环境变量
+    sudo vim ~/.bashrc
+     * export PATH=/usr/local/cuda-9.1/bin:$PATH
+     * export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
+    sudo vim /etc/profile #动态链接库
+     * export PATH=/usr/local/cuda/bin:$PATH
+    sudo vim /etc/ld.so.conf.d/cuda.conf #创建连接文件
+     * /usr/local/cuda/lib64
+    sudo ldconfig #执行
+    
+   #### >4 验证安装成功
+    cd /usr/local/cuda-*/sample/1_Utilities/deviceQuery
+    sudo make
+    sudo ./deviceQuery
+    有如下图所示结果，则安装成功
 
 

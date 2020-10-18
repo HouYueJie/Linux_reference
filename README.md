@@ -25,7 +25,7 @@ cuDNN 8.0-linux-x64-v7.1
   如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
 
   
-### 4.根据GPU drive 匹配 CUDA；  
+### 4.根据GPU drive 匹配 CUDA vision；  
 【版本不对后续会出问题】
 i[image]()  
 
@@ -36,20 +36,20 @@ i[image]()
   
 ### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
   
-   ##### 1 查看可更新版本：
+   #### 1 查看可更新版本：
     sudo apt-cache search linux-image
     
-   ##### 2 安装指定版本：  
+   #### 2 安装指定版本：  
     sudo apt-get install linux-image-x.x.x-x-generic；  
     sudo apt-get install linux-image-extra-x.x.x-x-generic；   
     sudo apt-get install linux-headers-x.x.x-x-generic。  
     
-   ##### 3 修改grub文件：【便于进入grub界面】  
+   #### 3 修改grub文件：【便于进入grub界面】  
     sudo vim /etc/default/grub;  
     i[image]()  
       
       
-   ##### 4 后续删除多余版本kernel，即可改回grub。
+   #### 4 后续删除多余版本kernel，即可改回grub。
 
 ### 7.关闭 nouveau:
     cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单

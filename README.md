@@ -73,7 +73,7 @@ cuDNN 8.0-linux-x64-v7.1
     https://developer.nvidia.com/cuda-toolkit-archive
    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/10.png)
    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/12.png)
-   【安装前阅读Online Documentation 中的 Guide ！！！】
+   【安装前阅读Online Documentation 中的 Guide ！！！】  
    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/11.png)
    #### >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs

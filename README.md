@@ -43,7 +43,7 @@ i[image]()
     sudo apt-get install linux-image-extra-x.x.x-x-generic；   
     sudo apt-get install linux-headers-x.x.x-x-generic。  
     
-    >3 修改grub文件：【便于进入grub界面】  
+    >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
     i[image]()  
       
@@ -59,7 +59,7 @@ i[image]()
     lsmod | grep nouveau #没有打印内容则成功
     
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
-  
+  https://developer.nvidia.com/cuda-toolkit-archive
 ### 9.下载并安装版本对应的cuDNN
 
 

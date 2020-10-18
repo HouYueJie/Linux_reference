@@ -32,16 +32,16 @@ cuDNN 8.0-linux-x64-v7.1
 ### 3.安装系统推荐的GPU drive；  
   Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
   
-  如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
-i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
+  如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。  
+  i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
 
 ### 4.根据GPU drive 匹配 CUDA vision；  
 【版本不对后续会出问题!!!】  
- i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/3.png)  
+i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/3.png)  
 
 ### 5.根据CUDA vision 匹配 kernel vision；  
 【版本不对后续会出问题!!!】  
- i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)  
+i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)  
 
   
 ### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  

@@ -41,20 +41,20 @@ i[image]()
 
   
 ### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
-    >1 查看可更新版本：
+   #### > 1 查看可更新版本：
     sudo apt-cache search linux-image
     
-    >2 安装指定版本：  
+   #### >2 安装指定版本：  
     sudo apt-get install linux-image-x.x.x-x-generic；  
     sudo apt-get install linux-image-extra-x.x.x-x-generic；   
     sudo apt-get install linux-headers-x.x.x-x-generic。  
     
-    >3 修改grub文件：【便于重启后进入grub界面】  
+   #### >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
     i[image]()  
       
       
-    >4 后续删除多余版本kernel，即可改回grub。
+   #### >4 后续删除多余版本kernel，即可改回grub。
 
 ### 7.关闭 nouveau:
     cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单
@@ -65,17 +65,17 @@ i[image]()
     lsmod | grep nouveau #没有打印内容则成功
     
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
-    >1 下载
+   #### >1 下载
     https://developer.nvidia.com/cuda-toolkit-archive
     i[image]()  
     
-    >2 安装
+   #### >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
     【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
     有如下图则安装成功
     i[image]()  
     
-    >3 配置环境变量
+   #### >3 配置环境变量
     sudo vim ~/.bashrc
      * export PATH=/usr/local/cuda-9.1/bin:$PATH
      * export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
@@ -85,7 +85,7 @@ i[image]()
      * /usr/local/cuda/lib64
     sudo ldconfig #执行
     
-    >4 验证安装成功
+   #### >4 验证安装成功
     cd /usr/local/cuda-*/sample/1_Utilities/deviceQuery
     sudo make
     sudo ./deviceQuery

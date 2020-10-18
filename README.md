@@ -26,7 +26,7 @@ cuDNN 8.0-linux-x64-v7.1
     #若报错则使用下面两条语句 
     sudo apt-get install build-essential 
     sudo apt install linux-headers-$(uname -r)    
-    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
     #若没有安装或者等级太高【自行百度降级流程】
     
 ### 3.安装系统推荐的GPU drive；  
@@ -63,16 +63,17 @@ cuDNN 8.0-linux-x64-v7.1
     cat /etc/modprode.d/blacklist-nouveau.conf #创建nouveau黑名单
      * blacklist nouveau #写入如下两句 
      * options nouveau modeset=0 #保存退出
-    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/8.png)   
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/8.png)   
     sudo update-initramfs -u
     sudo reboot #重启
     lsmod | grep nouveau #没有打印内容则成功
-    ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/9.png)  
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/9.png)  
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
    #### >1 下载
     https://developer.nvidia.com/cuda-toolkit-archive
-   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/6.png)  
-    
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/10.png)  
+   【安装前阅读Online Documentation 中的 Guide ！！！】
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/11.png)
    #### >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
     【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】

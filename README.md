@@ -19,12 +19,14 @@ cuDNN 8.0-linux-x64-v7.1
 ### 1.确定系统 kernel vision 和 system vision；  
 ![image](https://github.com/HouYueJie/Linux_reference/blob/master/CUDA_IMG/1.png)    
 
-### 2.查看gcc 版本情况:  
+### 2.查看gcc 和 g++ 版本情况:  
     sudo gcc --version
+    sudo g++ --version
     #若报错或等级不够则使用下面两条语句 
     sudo apt-get install build-essential 
     sudo apt install linux-headers-$(uname -r)  
-
+    
+    #若没有安装或者等级太高【自行百度降级流程】
 ### 3.安装系统推荐的GPU drive；  
   Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
   

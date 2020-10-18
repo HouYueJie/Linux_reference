@@ -32,16 +32,16 @@ cuDNN 8.0-linux-x64-v7.1
 ### 3.安装系统推荐的GPU drive；  
   Ubuntu系统设置 --> 软件和更新 --> 附加驱动 --> 选择最新的NVIDIA drive。  
   
-  如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。  
-  i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
+  如果按照成功，用 nvidia-smi指令，有如下图所示内容出现。
+![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/2.png)
 
 ### 4.根据GPU drive 匹配 CUDA vision；  
 【版本不对后续会出问题!!!】  
-i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/3.png)  
+ ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/3.png)  
 
 ### 5.根据CUDA vision 匹配 kernel vision；  
 【版本不对后续会出问题!!!】  
-i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)  
+ ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)  
 
   
 ### 6.（可选）当选择出的 kernel vision ≠ 系统本身的kernel vision  --> 安装特定kernel 并 替换 kernel；  
@@ -55,7 +55,7 @@ i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)
     
    #### >3 修改grub文件：【便于重启后进入grub界面】  
     sudo vim /etc/default/grub;  
-   i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/5.png)  
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/5.png)  
       
    #### >4 后续删除多余版本kernel，即可改回grub。
 
@@ -70,7 +70,7 @@ i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
    #### >1 下载
     https://developer.nvidia.com/cuda-toolkit-archive
-   i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/6.png)  
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/6.png)  
     
    #### >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
@@ -93,12 +93,12 @@ i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)
     sudo make
     sudo ./deviceQuery
     有如下图所示结果，则安装成功
-   i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/8.png)
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/8.png)
   
 ### 9.下载并安装版本对应的cuDNN
    #### >1 下载 【推荐解压包安装，稳定】
     https://developer.nvidia.com/rdp/cudnn-archive
-   i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/9.png)  
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/9.png)  
     
    #### >2 解压
     tar -xzvf cudnn-9.0-linux-x64-v7.tgz
@@ -111,5 +111,5 @@ i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/4.png)
    #### >4 验证安装成功
     cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
     有如下图所示结果，则安装成功
-   i[image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/10.png)
+   ![image](https://github.com/HouYueJie/Linux_reference/blob/main/CUDA_IMG/10.png)
 

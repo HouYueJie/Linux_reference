@@ -67,12 +67,14 @@ i[image]()
 ### 8.下载并安装版本对应的CUDA，并设置好环境变量；  
     >1 下载
     https://developer.nvidia.com/cuda-toolkit-archive
-    i[image]()
+    i[image]()  
+    
     >2 安装
     sudo sh cuda_xxx_xxx_linux.run --no-opengl-libs
     【默认安装路径、除安装NVIDIA外，其余步骤都是输入‘y’，没有则按enter键】
     有如下图则安装成功
-    i[image]()
+    i[image]()  
+    
     >3 配置环境变量
     sudo vim ~/.bashrc
      * export PATH=/usr/local/cuda-9.1/bin:$PATH
@@ -82,6 +84,12 @@ i[image]()
     sudo vim /etc/ld.so.conf.d/cuda.conf #创建连接文件
      * /usr/local/cuda/lib64
     sudo ldconfig #执行
+    
+    >4 验证安装成功
+    cd /usr/local/cuda-*/sample/1_Utilities/deviceQuery
+    sudo make
+    sudo ./deviceQuery
+    有如下图所示结果，则安装成功
     
   
 ### 9.下载并安装版本对应的cuDNN
